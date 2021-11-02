@@ -50,7 +50,7 @@ A: Yes, but you must follow the licensing terms: https://creativecommons.org/lic
 
 Q: Can I make modifications to the game?
 
-A: No. This restriction may be lifted in the future, but in the meantime, you are not allowed to make adaptations to the entire game, only the assets and the source code seperatly.
+A: Yes, but you must follow the licensing terms: https://creativecommons.org/licenses/by-nc-sa/3.0/ (CC BY-NC-SA 3.0)
 
 Q: Windows Defender Smartscreen Blocked the game, what do I do?
 
@@ -90,6 +90,9 @@ Click Windows Firewall or Windows Defender Firewall.
 Choose Allow an app or feature through Windows Firewall.
 Click on the program from the list to select it or click on Add Another App to find it.
 
+Q: I want to make a contribution to the development, how do I do that?
+
+A: If you create a mod or a sprite, music, whatever it is, you can post it in the Discussions tab on the GitHub Repository.
 
 
 
