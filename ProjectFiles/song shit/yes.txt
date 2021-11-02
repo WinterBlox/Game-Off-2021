@@ -1,0 +1,26 @@
+All music in this game is from freesound.org.
+The following text contains all of the sounds used and, if necessary, their freesound links and Creative Commons licenses will be linked.
+
+Battle 1 - Frenzyfalafel (by eardeer)
+Freesound.org link: https://freesound.org/people/eardeer/sounds/402991/
+CC License: CC-BY-NC 3.0 - https://creativecommons.org/licenses/by-nc/3.0/
+
+Menu Theme - Epicenchilada (by eardeer)
+Freesound.org link: https://freesound.org/people/eardeer/sounds/403197/
+CC License: CC-BY-NC 3.0 - https://creativecommons.org/licenses/by-nc/3.0/
+
+Battle 2 - Who's the Boss?! (by eardeer)
+Freesound.org link: https://freesound.org/people/eardeer/sounds/402777/
+CC License: CC-BY-NC 3.0 - https://creativecommons.org/licenses/by-nc/3.0/
+
+Click Noise - Button Bleep 01 (by Jaoreir)
+Freesound.org link: https://freesound.org/people/Jaoreir/sounds/533568/
+CC License: Public Domain Dedication (CC0 1.0)
+
+Battle 3 - trippy chippy loop (by zagi2)
+Freesound.org link: https://freesound.org/people/zagi2/sounds/205885/
+CC License: CC-BY-NC 3.0 - https://creativecommons.org/licenses/by-nc/3.0/
+
+Miniboss Theme - Tunnel (by firstspace)
+Freesound.org link: https://freesound.org/people/firstspace/sounds/456503/
+CC License: Public Domain Dedication (CC0 1.0)
