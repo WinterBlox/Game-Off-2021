@@ -15,6 +15,9 @@ public class PlayerManager : NetworkBehaviour
     // LISTS
     List<GameObject> cards = new List<GameObject>();
 
+    [SyncVar]
+    int cardsPlayed = 0;
+
     // OnStartClient is called before Start, and is only run by the Connecting Client
     public override void OnStartClient() 
     {
@@ -46,6 +49,8 @@ public class PlayerManager : NetworkBehaviour
     public void PlayCard(GameObject card)
     {
         CmdPlayCard(card);
+        cardsPlayed++;
+        Debug.Log(cardsPlayed);
     }
 
     [Command]
@@ -66,11 +71,16 @@ public class PlayerManager : NetworkBehaviour
             else
             {
                 card.transform.SetParent(EnemyArea.transform, false);
+                card.GetComponent<CardFlipper>().Flip();
             }
         }
         else if (type == "Played")
         {
             card.transform.SetParent(DropZone.transform, false);
+            if (!hasAuthority)
+            {
+                card.GetComponent<CardFlipper>().Flip();
+            }
         }
     }
 }

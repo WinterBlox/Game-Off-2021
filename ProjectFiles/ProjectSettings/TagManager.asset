@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlrCard
   - OppCard
+  - SoundManager
   layers:
   - Default
   - TransparentFX
