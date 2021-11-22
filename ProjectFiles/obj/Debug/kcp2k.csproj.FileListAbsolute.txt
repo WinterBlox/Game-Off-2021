@@ -1,0 +1,2 @@
+C:\Users\lwils\Documents\GitHub\Game-Off-2021\ProjectFiles\obj\Debug\kcp2k.csprojAssemblyReference.cache
+C:\Users\lwils\Documents\GitHub\Game-Off-2021\ProjectFiles\obj\Debug\kcp2k.csproj.CoreCompileInputs.cache

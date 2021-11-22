@@ -1,22 +1,40 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-
 public class PlayerManager : NetworkBehaviour
 {
+    // CARDS
+    public GameObject TEMP1;
+    public GameObject TEMP2;
+    public GameObject DISINFECT;
+    public GameObject REGEDIT;
+
     // PUBLIC VARIABLES
-    public GameObject Card1;
-    public GameObject Card2;
     public GameObject PlayerArea;
     public GameObject EnemyArea;
-    public GameObject DropZone;
+    public GameObject PlayerYard;
+    public GameObject EnemyYard;
+    private bool isMyTurn;
+
+    public GameObject PSlot1;
+    public GameObject PSlot2;
+    public GameObject PSlot3;
+    public GameObject PSlot4;
+    public GameObject PSlot5;
+    public GameObject ESlot1;
+    public GameObject ESlot2;
+    public GameObject ESlot3;
+    public GameObject ESlot4;
+    public GameObject ESlot5;
+
+    public int cardsPlayed;
 
     // LISTS
     List<GameObject> cards = new List<GameObject>();
+    public List<GameObject> PlayerSockets = new List<GameObject>();
+    public List<GameObject> EnemySockets = new List<GameObject>();
 
-    [SyncVar]
-    int cardsPlayed = 0;
+   
 
     // OnStartClient is called before Start, and is only run by the Connecting Client
     public override void OnStartClient() 
@@ -25,8 +43,34 @@ public class PlayerManager : NetworkBehaviour
 
         PlayerArea = GameObject.Find("PlayerArea");
         EnemyArea = GameObject.Find("EnemyArea");
-        DropZone = GameObject.Find("DropZone");
-       
+        PlayerYard = GameObject.Find("PlayerYard");
+        EnemyYard = GameObject.Find("EnemyYard");
+        PSlot1 = GameObject.Find("PSlot1");
+        PSlot2 = GameObject.Find("PSlot2");
+        PSlot3 = GameObject.Find("PSlot3");
+        PSlot4 = GameObject.Find("PSlot4");
+        PSlot5 = GameObject.Find("PSlot5");
+        ESlot1 = GameObject.Find("ESlot1");
+        ESlot2 = GameObject.Find("ESlot2");
+        ESlot3 = GameObject.Find("ESlot3");
+        ESlot4 = GameObject.Find("ESlot4");
+        ESlot5 = GameObject.Find("ESlot5");
+
+        PlayerSockets.Add(PSlot1);
+        PlayerSockets.Add(PSlot2);
+        PlayerSockets.Add(PSlot3);
+        PlayerSockets.Add(PSlot4);
+        PlayerSockets.Add(PSlot5);
+        EnemySockets.Add(ESlot1);
+        EnemySockets.Add(ESlot2);
+        EnemySockets.Add(ESlot3);
+        EnemySockets.Add(ESlot4);
+        EnemySockets.Add(ESlot5);
+
+        if (isClientOnly)
+        {
+            isMyTurn = true;
+        }
     }
 
     [Server] // Prevents the client from executing the functions embedded beneath
@@ -34,8 +78,10 @@ public class PlayerManager : NetworkBehaviour
     // OnStartServer is called before Start, and is only run by the Hosting Server
     public override void OnStartServer()
     {
-        cards.Add(Card1);
-        cards.Add(Card2);
+        cards.Add(TEMP1);
+        cards.Add(TEMP2);
+        cards.Add(DISINFECT);
+        cards.Add(REGEDIT);
     }
     
     [Command] // Marks the below functions as server commands
@@ -76,7 +122,7 @@ public class PlayerManager : NetworkBehaviour
         }
         else if (type == "Played")
         {
-            card.transform.SetParent(DropZone.transform, false);
+            card.transform.SetParent(PSlot1.transform, false);
             if (!hasAuthority)
             {
                 card.GetComponent<CardFlipper>().Flip();

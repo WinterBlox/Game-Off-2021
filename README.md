@@ -94,5 +94,9 @@ Q: I want to make a contribution to the development, how do I do that?
 
 A: If you create a mod or a sprite, music, whatever it is, you can post it in the Discussions tab on the GitHub Repository.
 
+Q: I can't click on the 'Initialize {}' button in Multiplayer Mode, why is that?
+
+A: Only the server host can press the Initalize button, if you can't press it, you're not the server host.
+
 
 

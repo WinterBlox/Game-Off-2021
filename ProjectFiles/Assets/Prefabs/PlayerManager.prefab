@@ -93,8 +93,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  Card1: {fileID: 1739298418088553781, guid: 13cdc2581be07b245aeffe373f654dd9, type: 3}
-  Card2: {fileID: 5543653012497236330, guid: 8dd3596284333944aba7e8437b61890d, type: 3}
+  TEMP1: {fileID: 1739298418088553781, guid: 13cdc2581be07b245aeffe373f654dd9, type: 3}
+  TEMP2: {fileID: 5543653012497236330, guid: 8dd3596284333944aba7e8437b61890d, type: 3}
+  DISINFECT: {fileID: 8104958460613086594, guid: 1909413ef3a8a9f4c8a55a9e783ed4b1, type: 3}
+  REGEDIT: {fileID: 8104958460613086594, guid: 33884231a5a02e44a8ead9e8e1869b0e, type: 3}
   PlayerArea: {fileID: 2059314871663235914, guid: 50a0c7128156e1045b2f2bd43ee14ad0, type: 3}
   EnemyArea: {fileID: 3609098721218136716, guid: c4d936b330157d640928ee931e42af74, type: 3}
-  DropZone: {fileID: 8297206690554595785, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+  PlayerYard: {fileID: 4647023516794802685, guid: fd57b51358dfb504aafb2bf3277d2240, type: 3}
+  EnemyYard: {fileID: 7369717545215482478, guid: 50d1e260b5025ef41b661b1cdfe7225b, type: 3}
+  PSlot1: {fileID: 0}
+  PSlot2: {fileID: 0}
+  PSlot3: {fileID: 0}
+  PSlot4: {fileID: 0}
+  PSlot5: {fileID: 0}
+  ESlot1: {fileID: 0}
+  ESlot2: {fileID: 0}
+  ESlot3: {fileID: 0}
+  ESlot4: {fileID: 0}
+  ESlot5: {fileID: 0}
+  cardsPlayed: 0
+  PlayerSockets: []
+  EnemySockets: []
