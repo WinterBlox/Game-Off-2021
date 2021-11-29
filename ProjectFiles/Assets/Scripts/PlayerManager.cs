@@ -8,13 +8,16 @@ public class PlayerManager : NetworkBehaviour
     public GameObject TEMP2;
     public GameObject DISINFECT;
     public GameObject REGEDIT;
+    public GameObject ENCRYPT;
+    public GameObject EXPOSE;
 
     // PUBLIC VARIABLES
+    public GameManager GameManager;
     public GameObject PlayerArea;
     public GameObject EnemyArea;
     public GameObject PlayerYard;
     public GameObject EnemyYard;
-    private bool isMyTurn;
+    public bool isMyTurn;
 
     public GameObject PSlot1;
     public GameObject PSlot2;
@@ -34,12 +37,14 @@ public class PlayerManager : NetworkBehaviour
     public List<GameObject> PlayerSockets = new List<GameObject>();
     public List<GameObject> EnemySockets = new List<GameObject>();
 
-   
+
 
     // OnStartClient is called before Start, and is only run by the Connecting Client
-    public override void OnStartClient() 
+    public override void OnStartClient()
     {
         base.OnStartClient();
+
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         PlayerArea = GameObject.Find("PlayerArea");
         EnemyArea = GameObject.Find("EnemyArea");
@@ -74,7 +79,7 @@ public class PlayerManager : NetworkBehaviour
     }
 
     [Server] // Prevents the client from executing the functions embedded beneath
-    
+
     // OnStartServer is called before Start, and is only run by the Hosting Server
     public override void OnStartServer()
     {
@@ -82,21 +87,25 @@ public class PlayerManager : NetworkBehaviour
         cards.Add(TEMP2);
         cards.Add(DISINFECT);
         cards.Add(REGEDIT);
+        cards.Add(ENCRYPT);
+        cards.Add(EXPOSE);
     }
-    
+
     [Command] // Marks the below functions as server commands
     public void CmdDealCards()
     {
-        GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector3(0, 0, 0), Quaternion.identity);
-        NetworkServer.Spawn(card, connectionToClient);
-        RpcShowCard(card, "Dealt");
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector3(0, 0, 0), Quaternion.identity);
+            NetworkServer.Spawn(card, connectionToClient);
+            RpcShowCard(card, "Dealt");
+        }
+        RpcGMChangeState("Compile {}");
     }
 
     public void PlayCard(GameObject card)
     {
         CmdPlayCard(card);
-        cardsPlayed++;
-        Debug.Log(cardsPlayed);
     }
 
     [Command]
@@ -122,11 +131,67 @@ public class PlayerManager : NetworkBehaviour
         }
         else if (type == "Played")
         {
-            card.transform.SetParent(PSlot1.transform, false);
+            if (cardsPlayed == 5)
+            {
+                cardsPlayed = 0;
+            }
+            if (hasAuthority)
+            {
+                card.transform.SetParent(PlayerSockets[cardsPlayed].transform, false);
+                CmdGMCardPlayed();
+            }
             if (!hasAuthority)
             {
+                card.transform.SetParent(EnemySockets[cardsPlayed].transform, false);
                 card.GetComponent<CardFlipper>().Flip();
             }
+            cardsPlayed++;
+            PlayerManager pm = NetworkClient.connection.identity.GetComponent<PlayerManager>();
+            pm.isMyTurn = !pm.isMyTurn;
+        }
+    }
+
+    [Command]
+    public void CmdGMChangeState (string stateRequest)
+    {
+        RpcGMChangeState(stateRequest);
+    }
+
+    [ClientRpc]
+    void RpcGMChangeState(string stateRequest)
+    {
+        GameManager.ChangeGameState(stateRequest);
+        if (stateRequest == "Compile {}")
+        {
+            GameManager.ChangeReadyClicks();
+        }
+    }
+
+    [Command]
+    void CmdGMCardPlayed()
+    {
+        RpcGMCardPlayed();
+    }
+
+    [ClientRpc]
+    void RpcGMCardPlayed()
+    {
+        GameManager.CardPlayed();
+    }
+
+    [Command]
+    public void CmdExecute()
+    {
+        RpcExecute();
+    }
+
+    [ClientRpc]
+    void RpcExecute()
+    {
+        for (int i = 0; i < PlayerSockets.Count; i++)
+        {
+            PlayerSockets[i].transform.GetChild(0).gameObject.transform.SetParent(PlayerYard.transform, false);
+            EnemySockets[i].transform.GetChild(0).gameObject.transform.SetParent(EnemyYard.transform, false);
         }
     }
 }

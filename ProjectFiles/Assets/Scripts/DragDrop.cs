@@ -13,14 +13,16 @@ public class DragDrop : NetworkBehaviour
     private GameObject startParent;
     public GameObject ValidCard;
     public GameObject Canvas;
-    public GameObject DropZone;
     public PlayerManager PlayerManager;
+    public GameManager GameManager;
 
 
     private void Start()
     {
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Canvas = GameObject.Find("Main Canvas");
-        DropZone = GameObject.Find("DropZone");
+        NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+        PlayerManager = networkIdentity.GetComponent<PlayerManager>();
         if (!hasAuthority)
         {
             isDraggable = false;
@@ -39,8 +41,12 @@ public class DragDrop : NetworkBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isDropped = true;
-        dropZone = collision.gameObject;
+        if (collision.gameObject == PlayerManager.PlayerSockets[PlayerManager.cardsPlayed])
+        {
+            isDropped = true;
+            dropZone = collision.gameObject;
+        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -71,7 +77,8 @@ public class DragDrop : NetworkBehaviour
     {
         if (!isDraggable) return;
         isDragging = false;
-        if (isDropped)
+
+        if (isDropped && PlayerManager.isMyTurn)
         {
             transform.SetParent(dropZone.transform, false);
             isDraggable = false;

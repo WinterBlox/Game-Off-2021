@@ -6,7 +6,10 @@ ScriptsOnlyBuild:
     - DebugLogDisplay
     - DragDrop
     - DrawCards
+    - GameManager
     - PlayerManager
+    - StatManager
+    - UIManager
     Bolt.Core.Runtime.dll:
     - Bolt.SceneVariables
     - Bolt.Variables
@@ -61,6 +64,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Multiplayer.unity:
@@ -115,27 +119,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3726}
     - Class: 114
-      Script: {instanceID: 3752}
+      Script: {instanceID: 3750}
     - Class: 114
-      Script: {instanceID: 4108}
+      Script: {instanceID: 3754}
     - Class: 114
-      Script: {instanceID: 4364}
+      Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 5094}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 5304}
+      Script: {instanceID: 4366}
     - Class: 114
-      Script: {instanceID: 5458}
+      Script: {instanceID: 5096}
     - Class: 114
-      Script: {instanceID: 5696}
+      Script: {instanceID: 5306}
     - Class: 114
-      Script: {instanceID: 5826}
+      Script: {instanceID: 5460}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5646}
     - Class: 114
-      Script: {instanceID: 6016}
+      Script: {instanceID: 5700}
     - Class: 114
-      Script: {instanceID: 25318}
+      Script: {instanceID: 5850}
+    - Class: 114
+      Script: {instanceID: 5936}
+    - Class: 114
+      Script: {instanceID: 6040}
+    - Class: 114
+      Script: {instanceID: 18366}
+    - Class: 114
+      Script: {instanceID: 19450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,21 +222,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 3752}
-    - Class: 114
-      Script: {instanceID: 3876}
+      Script: {instanceID: 3754}
     - Class: 114
       Script: {instanceID: 3878}
     - Class: 114
-      Script: {instanceID: 4952}
+      Script: {instanceID: 3880}
     - Class: 114
-      Script: {instanceID: 5338}
+      Script: {instanceID: 4954}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5340}
     - Class: 114
-      Script: {instanceID: 6016}
+      Script: {instanceID: 5936}
     - Class: 114
-      Script: {instanceID: 6018}
+      Script: {instanceID: 6040}
+    - Class: 114
+      Script: {instanceID: 6042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,7 +296,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ec0dd865a06b258fdadaaa60bcccb43f
+      Hash: 819987b154b939277922988c37cf7ba5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DrawCards
@@ -788,7 +800,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: a552ae6135746941a469a5836425272f
+      Hash: b436f57a1e95b8e7dd8b864b25c8c2ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragDrop
@@ -828,6 +840,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: bb560bc3eec556516d3480ba529763ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DebugLogDisplay
   - hash:
       serializedVersion: 2
       Hash: 3fde799916d3f66dac2463c8a33fded0
@@ -1286,7 +1304,13 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 3ad6382617c540dc3fbe58f63d4c1b7a
+      Hash: 328c056225144122f409028161545583
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: f5bd485c4c442a85d7942dae79503452
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -1700,13 +1724,19 @@ ScriptsOnlyBuild:
     className: VariablesSaver
   - hash:
       serializedVersion: 2
-      Hash: bb560bc3eec556516d3480ba529763ad
+      Hash: 6460fef322b85cbfef59c1c62e65c27d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DebugLogDisplay
+    className: UIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 58ade65a29d9af6c0c9ad12edd36349b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StatManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Title Screen.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/lwils/Documents/GitHub/Game-Off-2021/ProjectFiles/Builds/day
-    20/Viralstorm.exe
+  playerPath: C:/Users/lwils/Documents/GitHub/Game-Off-2021/ProjectFiles/Builds/TB
+    1/Viralstorm.exe

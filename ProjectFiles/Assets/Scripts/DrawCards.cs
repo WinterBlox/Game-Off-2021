@@ -38,6 +38,7 @@ public class DrawCards : NetworkBehaviour
 
     void ExecuteClick ()
     {
-
+        PlayerManager.CmdExecute();
+        PlayerManager.CmdGMChangeState("Initialize {}");
     }    
 }

@@ -3,7 +3,26 @@ guid: 76bf81ee28c633e47b0ace99727755bd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TEMP1: {fileID: 1739298418088553781, guid: 13cdc2581be07b245aeffe373f654dd9, type: 3}
+  - TEMP2: {fileID: 5543653012497236330, guid: 8dd3596284333944aba7e8437b61890d, type: 3}
+  - DISINFECT: {fileID: 8104958460613086594, guid: 1909413ef3a8a9f4c8a55a9e783ed4b1, type: 3}
+  - REGEDIT: {fileID: 8104958460613086594, guid: 33884231a5a02e44a8ead9e8e1869b0e, type: 3}
+  - GameManager: {instanceID: 0}
+  - PlayerArea: {fileID: 2059314871663235914, guid: 50a0c7128156e1045b2f2bd43ee14ad0, type: 3}
+  - EnemyArea: {fileID: 3609098721218136716, guid: c4d936b330157d640928ee931e42af74, type: 3}
+  - PlayerYard: {fileID: 4647023516794802685, guid: fd57b51358dfb504aafb2bf3277d2240, type: 3}
+  - EnemyYard: {fileID: 7369717545215482478, guid: 50d1e260b5025ef41b661b1cdfe7225b, type: 3}
+  - PSlot1: {fileID: 7861919873898771300, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+  - PSlot2: {fileID: 6085685807408565330, guid: 8c464d2da8fae8a4ea4c4035f4efa603, type: 3}
+  - PSlot3: {instanceID: 0}
+  - PSlot4: {instanceID: 0}
+  - PSlot5: {instanceID: 0}
+  - ESlot1: {instanceID: 0}
+  - ESlot2: {instanceID: 0}
+  - ESlot3: {instanceID: 0}
+  - ESlot4: {instanceID: 0}
+  - ESlot5: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

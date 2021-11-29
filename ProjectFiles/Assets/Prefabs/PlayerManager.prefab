@@ -97,20 +97,24 @@ MonoBehaviour:
   TEMP2: {fileID: 5543653012497236330, guid: 8dd3596284333944aba7e8437b61890d, type: 3}
   DISINFECT: {fileID: 8104958460613086594, guid: 1909413ef3a8a9f4c8a55a9e783ed4b1, type: 3}
   REGEDIT: {fileID: 8104958460613086594, guid: 33884231a5a02e44a8ead9e8e1869b0e, type: 3}
+  ENCRYPT: {fileID: 9090326206015890888, guid: fbb3f3ef0366e284db6f464a7663e0e5, type: 3}
+  EXPOSE: {fileID: 3488010072813766280, guid: 6610cfb4154371b4d8f48c2eb16c76c7, type: 3}
+  GameManager: {fileID: 0}
   PlayerArea: {fileID: 2059314871663235914, guid: 50a0c7128156e1045b2f2bd43ee14ad0, type: 3}
   EnemyArea: {fileID: 3609098721218136716, guid: c4d936b330157d640928ee931e42af74, type: 3}
   PlayerYard: {fileID: 4647023516794802685, guid: fd57b51358dfb504aafb2bf3277d2240, type: 3}
   EnemyYard: {fileID: 7369717545215482478, guid: 50d1e260b5025ef41b661b1cdfe7225b, type: 3}
-  PSlot1: {fileID: 0}
-  PSlot2: {fileID: 0}
-  PSlot3: {fileID: 0}
-  PSlot4: {fileID: 0}
-  PSlot5: {fileID: 0}
-  ESlot1: {fileID: 0}
-  ESlot2: {fileID: 0}
-  ESlot3: {fileID: 0}
-  ESlot4: {fileID: 0}
-  ESlot5: {fileID: 0}
+  isMyTurn: 0
+  PSlot1: {fileID: 7861919873898771300, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+  PSlot2: {fileID: 6085685807408565330, guid: 8c464d2da8fae8a4ea4c4035f4efa603, type: 3}
+  PSlot3: {fileID: 6301869572856897280, guid: aed6b884c5d363e49b5ffdfa51971452, type: 3}
+  PSlot4: {fileID: 4357602365336726854, guid: 50c738ad1e8184d4b8d8600b175cb563, type: 3}
+  PSlot5: {fileID: 3294835549570300937, guid: a121a7ba7def29a46859ecab0a480b8e, type: 3}
+  ESlot1: {fileID: 1236763091057785937, guid: e00e21819d2f83143aeabc59c7c073bc, type: 3}
+  ESlot2: {fileID: 5092678893540705315, guid: c3ba67cb077f65f4ea24841a0c3dca34, type: 3}
+  ESlot3: {fileID: 7850846068897351041, guid: 0688d2c6d00133e4ba4914857bed617d, type: 3}
+  ESlot4: {fileID: 1844803026063708345, guid: f69a4181b11a68b4e826771d9fad43ad, type: 3}
+  ESlot5: {fileID: 5754690887100758681, guid: cfb670c901e7ccf47af48850f17e2a93, type: 3}
   cardsPlayed: 0
   PlayerSockets: []
   EnemySockets: []
