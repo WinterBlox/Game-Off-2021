@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7757855003626564677}
   - component: {fileID: 5957998860898875063}
   - component: {fileID: 4917926755406125222}
+  - component: {fileID: 3710278741995547100}
   m_Layer: 6
   m_Name: Encrypt
   m_TagString: PlrCard
@@ -264,3 +265,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFront: {fileID: 21300000, guid: e60ed83e3be839042b2f22779dbc234e, type: 3}
   cardBack: {fileID: 21300000, guid: 8db85fd289d8e4c49a2571ff6bb8f252, type: 3}
+--- !u!114 &3710278741995547100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090326206015890888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c109a6a46865e45ad5c6c35eb160ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PlayerManager: {fileID: 457295508815285530, guid: f22d61f448a8a0246b070e9e47f5917f, type: 3}

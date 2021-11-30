@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7346702807376217103}
   - component: {fileID: 6697656556708470525}
   - component: {fileID: 5359907054179627244}
+  - component: {fileID: 6154935157117756578}
   m_Layer: 6
   m_Name: Regedit
   m_TagString: PlrCard
@@ -264,3 +265,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFront: {fileID: 21300000, guid: 9af81ddea6525ff469fd967da70b2b7c, type: 3}
   cardBack: {fileID: 21300000, guid: 8db85fd289d8e4c49a2571ff6bb8f252, type: 3}
+--- !u!114 &6154935157117756578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104958460613086594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b9d81f08f5066468a9ce4e315a581d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PlayerManager: {fileID: 457295508815285530, guid: f22d61f448a8a0246b070e9e47f5917f, type: 3}

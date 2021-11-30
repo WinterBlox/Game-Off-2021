@@ -12,7 +12,19 @@ public class GameManager : NetworkBehaviour
     public int PlayerVariables;
     public int OpponentVariables;
     public UIManager UIManager;
-    public StatManager StatManager;
+
+    // PLAYER STAT DECS
+    public int HealthP;
+    public int MaxHealthP;
+    public int AttackP;
+    public int DefenseP;
+
+    // ENEMY STAT DECS
+    public int HealthE;
+    public int MaxHealthE;
+    public int AttackE;
+    public int DefenseE;
+
 
     private int ReadyClicks = 0;
 
@@ -21,10 +33,20 @@ public class GameManager : NetworkBehaviour
     void Start()
     {
         UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-        StatManager = GameObject.Find("StatManager").GetComponent<StatManager>();
-        UIManager.UpdatePlayerText();
+        UIManager.UpdateText();
         UIManager.UpdateButtonText(GameState);
-        
+
+        // PLAYER STATS
+        MaxHealthP = 100;
+        HealthP = MaxHealthP;
+        AttackP = 10;
+        DefenseP = 10;
+
+        // ENEMY STATS
+        MaxHealthE = 100;
+        HealthE = MaxHealthE;
+        AttackE = 10;
+        DefenseE = 10;
     }
 
     public void ChangeGameState(string stateRequest)
@@ -37,6 +59,7 @@ public class GameManager : NetworkBehaviour
         else if (stateRequest == "Compile {}" && ReadyClicks == 1)
         {
             GameState = "Compile {}";
+            UIManager.HighlightTurn(TurnOrder);
         }
         else if (stateRequest == "Execute {}")
         {
@@ -54,9 +77,25 @@ public class GameManager : NetworkBehaviour
     public void CardPlayed()
     {
         TurnOrder++;
+        UIManager.HighlightTurn(TurnOrder);
         if (TurnOrder == 10)
         {
             ChangeGameState("Execute {}");
         }
+    }
+
+    public void UpdateHealth (int PHP, int EHP, bool hasAuth)
+    {
+        if (hasAuth)
+        {
+            HealthP += PHP;
+            HealthE -= EHP;
+        }
+        else
+        {
+            HealthP -= EHP;
+            HealthE += PHP;
+        }
+        UIManager.UpdateText();
     }
 }

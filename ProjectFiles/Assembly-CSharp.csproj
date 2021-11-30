@@ -57,14 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DrawCards.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\StatManager.cs" />
     <Compile Include="Assets\Scripts\DragDrop.cs" />
     <Compile Include="Assets\Scripts\DebugLogDisplay.cs" />
     <Compile Include="Assets\Scripts\BGScroll.cs" />
     <Compile Include="Assets\Scripts\CardFlipper.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\StatManager.cs" />
+    <Compile Include="Assets\Scripts\CardAbilities.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Temp1.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Temp2.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Disinfect.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Regedit.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Expose.cs" />
+    <Compile Include="Assets\Scripts\CardScripts\Encrypt.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Ludiq\Ludiq.Core\DotNetDocumentation\System.Web.Extensions.Design.xml" />

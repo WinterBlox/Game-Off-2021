@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2731931450858868485}
   - component: {fileID: 2085066908750829047}
   - component: {fileID: 756404042809474022}
+  - component: {fileID: 4513289990660317874}
   m_Layer: 6
   m_Name: Expose
   m_TagString: PlrCard
@@ -252,3 +253,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFront: {fileID: 21300000, guid: 7d16e152592eb694e983d567c1a48a98, type: 3}
   cardBack: {fileID: 21300000, guid: 8db85fd289d8e4c49a2571ff6bb8f252, type: 3}
+--- !u!114 &4513289990660317874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488010072813766280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7752371b0a1722c4786113445af2ea5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PlayerManager: {fileID: 457295508815285530, guid: f22d61f448a8a0246b070e9e47f5917f, type: 3}

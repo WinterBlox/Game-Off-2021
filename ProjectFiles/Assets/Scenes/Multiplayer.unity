@@ -378,6 +378,18 @@ PrefabInstance:
       propertyPath: sceneId
       value: 840047426
       objectReference: {fileID: 0}
+    - target: {fileID: 3980927461373626649, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980927461373626649, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980927461373626649, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 0.16078432
+      objectReference: {fileID: 0}
     - target: {fileID: 7861919873898771300, guid: b5ecc4a132a6fe546925a4f5cc35c9e0, type: 3}
       propertyPath: m_Name
       value: PSlot1
@@ -1150,14 +1162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ae0d72a624e1e4ca7a73176715ccfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthP: 100
-  MaxHealthP: 100
-  AttackP: 10
-  DefenseP: 10
-  HealthE: 100
-  MaxHealthE: 100
-  AttackE: 10
-  DefenseE: 10
 --- !u!4 &831033479
 Transform:
   m_ObjectHideFlags: 0

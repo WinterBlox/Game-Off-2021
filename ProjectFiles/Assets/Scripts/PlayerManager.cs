@@ -105,6 +105,7 @@ public class PlayerManager : NetworkBehaviour
 
     public void PlayCard(GameObject card)
     {
+        card.GetComponent<CardAbilities>().OnExecute();
         CmdPlayCard(card);
     }
 
@@ -190,8 +191,21 @@ public class PlayerManager : NetworkBehaviour
     {
         for (int i = 0; i < PlayerSockets.Count; i++)
         {
+            PlayerSockets[i].GetComponentInChildren<CardAbilities>().OnExecute();
             PlayerSockets[i].transform.GetChild(0).gameObject.transform.SetParent(PlayerYard.transform, false);
             EnemySockets[i].transform.GetChild(0).gameObject.transform.SetParent(EnemyYard.transform, false);
         }
+    }
+
+    [Command]
+    public void CmdGMUpdateHealth (int PHP, int EHP)
+    {
+        RpcGMUpdateHealth(PHP, EHP);
+    }
+
+    [ClientRpc]
+    public void RpcGMUpdateHealth (int PHP, int EHP)
+    {
+        GameManager.UpdateHealth(PHP, EHP, hasAuthority);
     }
 }
