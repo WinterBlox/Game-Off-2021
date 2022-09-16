@@ -1,3 +1,5 @@
+## WARNING: The code for this game is severely outdated with several vulnerabilities that will never be patched. It is recommended that you do not play this game anymore.
+
 # Viralstorm 
 Welcome to the Viralstorm Homepage! This is where I will (occasionally) link Video Snippets on YT, Itch.io Devblogs, and the most recently uploaded (important) files!
 
