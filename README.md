@@ -1,4 +1,5 @@
 ## WARNING: The code for this game is severely outdated with several vulnerabilities that will never be patched. It is recommended that you do not play this game anymore.
+### Sub-Note: This Repository has been archived. I am no longer working on this game, I haven't been for years. If you were still planning on seeing a full release of this game, then give up on that dream please.
 
 # Viralstorm 
 Welcome to the Viralstorm Homepage! This is where I will (occasionally) link Video Snippets on YT, Itch.io Devblogs, and the most recently uploaded (important) files!
